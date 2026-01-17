@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <p id="app_name">TaskFlow</p>
+        <button id="logout_btn">Logout</button>
+    </header>
+    
+    <main id="container">
+        <div class="box-1">
+            <div id="user-info">
+                <p class="name"></p>
+                <p class="email"></p>
+            </div>
+            <br>
+            <div id="actions">
+                <p>Action Menu</p>
+                <div id="new-task" class="action-btn">Create New Tasks</div>
+                <div id="view-items" class="action-btn">View Items</div>
+                <div id="edit-items" class="action-btn">Edit Items</div>
+            </div>
+        </div>
+
+        <div class="box-2">
+            <div id="view-task-container">
+                <div class="view-task-heading heading"><h3>My Tasks</h3>
+                        <select id="filter-option" name="filter">
+                        <option value="all" selected>All</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                <div id="list" class="area">
+                </div>
+                <div class="edit-form">
+                    <label for="edt-title">Title of the task</label>
+                    <input type="text" id="edt-title" required>
+
+                    <label for="edt-desc">Description</label>
+                    <textarea name="desc" id="edt-desc" maxlength="150" required></textarea>
+
+                    <label for="edt-date">Due Date</label>
+                    <input type="date" id="edt-date">
+                    <div class="edit-btns">
+                        <button id="edit-btn">Edit Task</button>
+                        <button id="cancel-btn">Cancel Edit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="create-task-container">
+                    <div class="create-task-heading heading"><h3>Create your Task</h3></div>
+                    <div class="create-task-area area">
+                        <div class="input-form">
+                            <label for="title">Title of the task</label>
+                            <input type="text" id="title" required>
+
+                            <label for="desc">Description</label>
+                            <textarea name="desc" id="desc" maxlength="150" required></textarea>
+
+                            <label for="date">Due Date</label>
+                            <input type="date" id="date">
+
+                            <button id="create-btn">Create Task</button>
+                         </div>
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboard.js">
+       
+    </script>
+</body>
+</html>
